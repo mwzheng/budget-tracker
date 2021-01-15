@@ -8,19 +8,58 @@ body {
   background-color: rgb(142, 197, 245);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+*:focus {
+  outline: none;
+}
+
 label {
-  display: inline-block;
   margin: 10px 0;
   display: block;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  border-bottom: 2px solid rgba(95, 94, 94, 0.2);
+}
+
+select {
+  margin-left: 5px;
+}
+
+li {
+  list-style-type: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+#root {
+  padding: 10px;
+  box-shadow:4px 5px 10px #333333;
+  background-color: rgb(158, 203, 241);
 }
 
 input[type='number'],
 input[type='text'],
 select {
   border: 1px solid #dedede;
-  border-radius: 2px;
+  border-radius: 5px;
   font-size: 16px;
   padding: 10px;
+  vertical-align:middle;
 }
 
 input[type='number']{
@@ -33,7 +72,7 @@ input[type='text'], select {
 }
 
 .add_btn {
-  width: 97%;
+  width: 96%;
   height: 30px;
   display: block;
   margin-top: 7px;
@@ -42,19 +81,43 @@ input[type='text'], select {
   border-style: none;
 }
 
-*:focus {
-  outline: none;
-}
-
 .add_btn:hover {
   background-color: rgb(207, 229, 248);
 }
 
-h2 {
-  border-bottom: 2px solid rgba(95, 94, 94, 0.2);
-}
-
-h1 {
+.delete_btn{
   text-align: center;
+  width: 30px;
+  height: 30px;
 }
 
+.i {
+  float: right;
+}
+
+.delete_btn:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+.remaining {
+  float: right;
+}
+
+.need {
+  color: rgb(168, 97, 97);
+}
+
+.savingOrDebt {
+  color: rgb(19, 144, 103);
+}
+
+.want {
+  color: rgb(116, 121, 48);
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}

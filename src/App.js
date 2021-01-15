@@ -6,15 +6,17 @@ import BudgetSplitUps from './components/BudgetSplitUps';
 import ExpenseList from './components/ExpenseList'
 import AddExpense from './components/AddExpense'
 
+import { GlobalProvider } from './context/GlobalState'
+
 function App() {
   return (
-    <div className="App">
+    <GlobalProvider>
       <Title />
       <Budget />
       <BudgetSplitUps />
       <ExpenseList />
       <AddExpense />
-    </div>
+    </GlobalProvider>
   );
 }
 

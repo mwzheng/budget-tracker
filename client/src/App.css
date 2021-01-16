@@ -26,6 +26,7 @@ label {
 
 h1 {
   text-align: center;
+  /* display: inline; */
 }
 
 h2 {
@@ -47,9 +48,22 @@ ul {
 }
 
 #root {
-  padding: 10px;
+  padding: 25px;
   box-shadow:4px 5px 10px #333333;
   background-color: rgb(158, 203, 241);
+}
+
+#info_modal_btn {
+  float: right;
+  border-radius: 50%;
+  transition: .8s ease-in-out;
+  position: relative;
+  top: -15px;
+  left: 15px;
+}
+
+#info_modal_btn:hover {
+  background-color: white;
 }
 
 input[type='number'],
@@ -64,7 +78,7 @@ select {
 
 input[type='number']{
   display: block;
-  width: 90%;
+  width: 91%;
 } 
 
 input[type='text'], select {
@@ -72,7 +86,7 @@ input[type='text'], select {
 }
 
 .add_btn {
-  width: 96%;
+  width: 97%;
   height: 30px;
   display: block;
   margin-top: 7px;
@@ -91,7 +105,24 @@ input[type='text'], select {
   height: 30px;
 }
 
-.i {
+.close {
+  float: right;
+  font-size: 25px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .75s ease-in-out;
+}
+
+.close:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+.cost, .remaining .close{
   float: right;
 }
 
@@ -99,10 +130,6 @@ input[type='text'], select {
   background-color: red;
   color: white;
   cursor: pointer;
-}
-
-.remaining {
-  float: right;
 }
 
 .need {
@@ -120,4 +147,36 @@ input[type='text'], select {
 .error {
   color: red;
   font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  position: fixed;
+  background: white;
+  width: 40%;
+  height: 55%;
+  top: 35%;
+  font-size: 20px;
+  font-weight:300;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 20px;
+  background-color:  rgb(142, 197, 245);
+}
+
+.split {
+  font-weight: bold;
+}
+
+.description {
+  font-size: 17px;
+  font-weight: 545;
 }
